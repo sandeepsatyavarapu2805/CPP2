@@ -1,7 +1,7 @@
+// to print all subarrays
+
 #include <iostream>
 using namespace std;
-
-// to print all subarrays
 
 int main() {
 
@@ -16,13 +16,11 @@ for(int i=0;i<n;i++) {
 }
 
 for(int st=0;st<n;st++) {
+    string print = "";
     for(int end=st;end<n;end++) {
-        for(int i=st;i<=end;i++) {
-            cout<<array[i];
-        }
-        cout<<" ";
-    }    
-    cout<<endl;
+        print += to_string(array[end]) + " ";
+        cout<<print<<endl;
+    }
 }
 
 return 0;

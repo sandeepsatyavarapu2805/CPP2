@@ -1,7 +1,7 @@
+// Q50.) POW(x,n) in leetcode
+
 #include <iostream>
 using namespace std;
-
-// called Q50.) POW(x,n) in leetcode
 
 int main() {
  

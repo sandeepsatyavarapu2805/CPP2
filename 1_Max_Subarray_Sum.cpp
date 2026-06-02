@@ -1,3 +1,5 @@
+// KADANE'S ALGORITHM
+
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -24,6 +26,8 @@ for(int i=0;i<n;i++) {
         currsum = 0;
     }
 }
+
+cout<<"The Maximum Subarray Sum is : "<<maxsum<<endl;
 
 return 0;
 }

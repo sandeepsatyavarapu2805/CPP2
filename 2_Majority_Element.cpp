@@ -1,3 +1,5 @@
+//  MOORE'S VOTING ALGORITHM
+
 #include <iostream>
 #include<vector>
 using namespace std;
@@ -25,7 +27,6 @@ for(int i=0;i<n;i++) {
     }else{
         count--;
     }
-
 }
 
 count = 0;
