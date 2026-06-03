@@ -3,38 +3,46 @@
 #include <iostream>
 using namespace std;
 
-int main() {
- 
-double x;
-int n;
-cout<<"Enter x and n : ";
-cin>>x>>n;
+int main()
+{
 
-double ans = 1;
-int copyn = n;
-double copyx = x;
+    double x;
+    int n;
+    cout << "Enter x and n : ";
+    cin >> x >> n;
 
-if(n>0){
-    while(n>0){
-        if(n%2==1){
-            ans *= x;
+    double ans = 1;
+    int copyn = n;
+    double copyx = x;
+
+    if (n > 0)
+    {
+        while (n > 0)
+        {
+            if (n % 2 == 1)
+            {
+                ans *= x;
+            }
+            x *= x;
+            n /= 2;
         }
-        x *= x;
-        n /= 2;
     }
-}else{
-    x = 1/x;
-    n = -n;
-    while (n>0){
-        if(n%2==1){
-            ans *= x;
+    else
+    {
+        x = 1 / x;
+        n = -n;
+        while (n > 0)
+        {
+            if (n % 2 == 1)
+            {
+                ans *= x;
+            }
+            x *= x;
+            n /= 2;
         }
-        x *= x;
-        n /= 2;     
     }
-}
 
-cout<<"The value of the exponent of "<<copyx<<" raised to the power of "<<copyn<<" is "<<ans;
+    cout << "The value of the exponent of " << copyx << " raised to the power of " << copyn << " is " << ans;
 
-return 0;
+    return 0;
 }
