@@ -43,11 +43,13 @@ int BinarySearch(vector<int> &arr, int target)
         }
         else if (target == arr[mid])
         {
-            break;
+            return mid;
         }
         else
         {
             end = mid;
         }
     }
+
+    return target;
 }
