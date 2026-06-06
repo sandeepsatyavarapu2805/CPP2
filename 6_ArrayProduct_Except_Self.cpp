@@ -23,7 +23,7 @@ vector<int> productExceptSelf(vector<int> &nums)
         result[i] *= suffix;
         suffix *= nums[i];
     }
-    
+
     return result;
 }
 
