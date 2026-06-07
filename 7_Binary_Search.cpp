@@ -5,6 +5,7 @@
 using namespace std;
 
 int BinarySearch(vector<int> &arr, int target);
+int RecursiveBinarySearch(vector<int> &arr, int target, int start, int end);
 
 int main()
 {
@@ -24,7 +25,9 @@ int main()
         cin >> nums[i];
     }
 
-    int result = BinarySearch(nums, target);
+    int result = RecursiveBinarySearch(nums, target, 0, n-1);
+    // int result = BinarySearch(nums, target); // normal binary search
+
     cout << result;
 
     return 0;
@@ -32,24 +35,47 @@ int main()
 
 int BinarySearch(vector<int> &arr, int target)
 {
-    int start = 0, end = arr.size();
+    int start = 0, end = arr.size() - 1;
 
-    for (int i = start; i < end; i++)
+    while (start <= end)
     {
-        int mid = (start + end) / 2;
+        int mid = start + (end - start) / 2;
         if (target > arr[mid])
         {
-            start = mid;
+            start = mid + 1;
         }
-        else if (target == arr[mid])
+        else if (target < arr[mid])
         {
-            return mid;
+            end = mid - 1;
         }
         else
         {
-            end = mid;
+            return mid;
         }
     }
 
-    return target;
+    return -1;
+}
+
+int RecursiveBinarySearch(vector<int> &arr, int target, int start, int end)
+{
+
+    if (start <= end)
+    {
+        int mid = start + (end - start) / 2;
+        if (target > arr[mid])
+        {
+            return RecursiveBinarySearch(arr, target, mid+1, end);
+        }
+        else if (target < arr[mid])
+        {
+            return RecursiveBinarySearch(arr, target, start, mid-1);
+        }
+        else
+        {
+            return mid;
+        }
+    }
+
+    return -1;
 }
