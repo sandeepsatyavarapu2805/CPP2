@@ -1,4 +1,4 @@
-// BINARY SEARCH ALGORITHM
+// BINARY SEARCH ALGORITHM useful on sorted array
 
 #include <iostream>
 #include <vector>
