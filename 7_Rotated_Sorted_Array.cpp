@@ -79,7 +79,7 @@ int RecursiveRotatedArraySearch(vector<int> &arr, int target, int start, int end
     }
 }
 
-// Logical Search
+// Logical Search this is more optimal since it has good space complexity than recursive
 int RotatedArraySearch(vector<int> &arr, int target)
 {
     int start = 0, end = arr.size() - 1;

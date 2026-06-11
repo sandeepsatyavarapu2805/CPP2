@@ -25,7 +25,7 @@ int main()
         cin >> nums[i];
     }
 
-    int result = RecursiveBinarySearch(nums, target, 0, n - 1);
+    int result = BinarySearch(nums, target);
     // int result = BinarySearch(nums, target); // normal binary search
 
     cout << result;

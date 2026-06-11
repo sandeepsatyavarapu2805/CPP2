@@ -1,0 +1,17 @@
+{
+    "Array Input Loop": {
+        "prefix": "vectorloop",
+        "body": [
+            "int n;",
+            "cout << \"Enter n: \";",
+            "cin >> n;",
+            "",
+            "vector<int> ${1:nums}(n);",
+            "for (int i = 0; i < n; i++) {",
+            "    cout << \"Enter the \" << i << \"th index number: \";",
+            "    cin >> ${1:nums}[i];",
+            "}"
+        ],
+        "description": "C++ vector input loop with namespace std"
+    }
+}

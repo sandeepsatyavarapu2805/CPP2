@@ -5,6 +5,25 @@
 #include <algorithm>
 using namespace std;
 
+int maxArea(vector<int> &height);
+
+int main()
+{
+    int n;
+    cout << "Enter n: ";
+    cin >> n;
+
+    vector<int> heights(n);
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter the " << i << "th index height: ";
+        cin >> heights[i];
+    }
+
+    cout << "The maximum area possible is " << maxArea(heights) << endl;
+    return 0;
+}
+
 int maxArea(vector<int> &height)
 {
     int max_area = 0;
@@ -22,21 +41,4 @@ int maxArea(vector<int> &height)
     }
 
     return max_area;
-}
-
-int main()
-{
-    int n;
-    cout << "Enter n: ";
-    cin >> n;
-
-    vector<int> heights(n);
-    for (int i = 0; i < n; i++)
-    {
-        cout << "Enter the " << i << "th index height: ";
-        cin >> heights[i];
-    }
-
-    cout << "The maximum area possible is " << maxArea(heights) << endl;
-    return 0;
 }
