@@ -68,7 +68,7 @@ int AllocateBooks(vector<int> &arr, int students)
     if (students > books)
         return -1;
 
-    int start = 0;
+    int start = *max_element(arr.begin(), arr.end());
     int end = reduce(arr.begin(), arr.end(), 0);
 
     int ans = -1;

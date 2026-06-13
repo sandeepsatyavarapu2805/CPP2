@@ -63,7 +63,7 @@ bool IsValid(vector<int> &arr, int maxAllowed_time, int painters)
 int MinimumPainting_Time(vector<int> &arr, int painters)
 {
     int boards = arr.size();
-    int start = 0;
+    int start = *max_element(arr.begin(), arr.end());
     int end = reduce(arr.begin(), arr.end(), 0);
 
     int ans = -1;
