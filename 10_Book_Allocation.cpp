@@ -42,7 +42,7 @@ bool IsValid(vector<int> &arr, int maxPagesAllowed, int original_students)
 
     for (int page : arr)
     {
-        if (page >= maxPagesAllowed)
+        if (page > maxPagesAllowed)
         {
             return false;
         }
@@ -58,10 +58,7 @@ bool IsValid(vector<int> &arr, int maxPagesAllowed, int original_students)
         }
     }
 
-    if (student > original_students)
-        return false;
-
-    return student;
+    return student <= original_students;
 }
 
 // Time Complexity --> O(logN * n) where N is range(end)
