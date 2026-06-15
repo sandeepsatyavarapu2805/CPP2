@@ -36,10 +36,10 @@ void SelectionSort(vector<int> &arr, string order)
         for (int i = 0; i < n; i++)
         {
             int targetIndex = i;
-            int min = 0;
-            for (int j = i; j < n; j++)
+            int min = i;
+            for (int j = i + 1; j < n; j++)
             {
-                if (arr[j] < arr[targetIndex])
+                if (arr[j] < arr[min])
                 {
                     min = j;
                 }
@@ -56,10 +56,10 @@ void SelectionSort(vector<int> &arr, string order)
         for (int i = 0; i < n; i++)
         {
             int targetIndex = i;
-            int max = 0;
-            for (int j = i; j < n; j++)
+            int max = i;
+            for (int j = i + 1; j < n; j++)
             {
-                if (arr[j] > arr[targetIndex])
+                if (arr[j] > arr[max])
                 {
                     max = j;
                 }
