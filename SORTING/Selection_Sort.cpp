@@ -26,14 +26,14 @@ int main()
     return 0;
 }
 
-// Time Complexity O(n^2) and if sorted decreases runtime using isswapped edge case
+// Time Complexity O(n^2) and if sorted the runtime remains the same
 void SelectionSort(vector<int> &arr, string order)
 {
     int n = arr.size();
 
     if (order == "ascending")
     {
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n - 1; i++)
         {
             int targetIndex = i;
             int min = i;
