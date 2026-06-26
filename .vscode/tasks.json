@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build temp.exe (debug)",
+      "type": "shell",
+      "command": "C:\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-std=c++23",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\temp.exe"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
