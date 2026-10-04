@@ -1,4 +1,4 @@
-// Given N length array with unit lenght number for each plank also M painters which take 1 unit time - 1 unit of plank
+// Given N length array with unit length number for each plank also M painters which take 1 unit time - 1 unit of plank
 
 #include <iostream>
 #include <vector>

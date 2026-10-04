@@ -1,5 +1,5 @@
 // Q410.) Split Array Largest Sum problem is similar to this logic in leetcode
-// Book Allocation of N books to M students where every stdudent gets atleast 1 book in contiguoug order in leetcode
+// Book Allocation of N books to M students where every stdudent gets atleast 1 book in contigous order in leetcode
 
 #include <iostream>
 #include <vector>
