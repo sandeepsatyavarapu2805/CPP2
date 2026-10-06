@@ -5,6 +5,7 @@
 #include <cctype>
 using namespace std;
 
+// will not work in leetcode without making some changes
 int main()
 {
     string s;
@@ -20,7 +21,7 @@ int main()
     int start = 0;
     int end = s.size() - 1;
 
-    while (start <= end)
+    while (start < end)
     {
         if (!isalnum(s[start]))
         {
